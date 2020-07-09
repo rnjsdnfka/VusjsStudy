@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div id="app">
+
+    <!--<img :id="'thumbnail_${id}'" :src="image">-->
+    <div :style="[style,fontStyle]">
+        ddd
+    </div>
+</div>v
+<body>
+<!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                id: 1,
+                image: 'https://picsum.photos/200/200/?image=353',
+                style: {
+                    background: 'red'
+                },
+                fontStyle:{
+                    fontSit: '10px',
+                    fontFamily: 'dotum'
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
