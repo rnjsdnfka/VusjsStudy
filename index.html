@@ -5,14 +5,26 @@
     <title>Title</title>
 </head>
 <div id="app">
-
+    <input type="text" id="user_id" v-model="userId">
+    <input type="password" id="user_password" v-model="userPassword">
+    <button type="button">로그인</button>
+    <br />
+    아이디 : {{ userId }}
+    <br />
+    비밀번호 : {{ userPassword }}
 </div>
 <body>
 <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     new Vue({
-        el: '#app'c
+        el: '#app',
+        data() {
+            return {
+                userId: '',
+                userPassword: ''
+            }
+        }
     })
 </script>
 </body>
