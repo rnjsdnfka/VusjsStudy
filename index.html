@@ -5,13 +5,12 @@
     <title>Title</title>
 </head>
 <div id="app">
-    <input type="text" id="user_id" v-model="userId">
-    <input type="password" id="user_password" v-model="userPassword">
-    <button type="button">로그인</button>
-    <br />
-    아이디 : {{ userId }}
-    <br />
-    비밀번호 : {{ userPassword }}
+    <Ul style="list-style: none;">
+        <li v-for="item in items">
+            {{ item.id }}
+            <img :src ="item.image">
+        </li>
+    </Ul>
 </div>
 <body>
 <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
@@ -21,8 +20,24 @@
         el: '#app',
         data() {
             return {
-                userId: '',
-                userPassword: ''
+                items: [
+                    {
+                        id: 1,
+                        image: 'https://picsum.photos/210/118/?image=1'
+                    },
+                    {
+                        id: 2,
+                        image: 'https://picsum.photos/210/118/?image=100'
+                    },
+                    {
+                        id: 3,
+                        image: 'https://picsum.photos/210/118/?image=160'
+                    },
+                    {
+                        id: 4,
+                        image: 'https://picsum.photos/210/118/?image=20'
+                    }
+                ]
             }
         }
     })
